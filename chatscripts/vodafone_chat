@@ -1,0 +1,38 @@
+# Tested on Vodafone USB Connect 4Gv2
+
+# Exit executition if module receives any of the following strings:
+ABORT 'BUSY'
+ABORT 'ERROR'
+ABORT 'NO CARRIER'
+ABORT 'NO DIALTONE'
+ABORT 'NO DIAL TONE'
+ABORT 'NO ANSWER'
+ABORT 'Invalid Login'
+ABORT 'Login incorrect'
+ABORT 'DELAYED'
+TIMEOUT 10
+REPORT CONNECT
+
+"" AT
+
+# Disconnect
+OK ATH
+
+# Reset nvm parameters to default
+OK ATZ
+
+# Receive result codes
+OK ATQ0
+
+"" AT
+
+# Define PDP context if not using blank APN feature
+# OK AT+CGDCONT=1,"IP","5g.vodafone.iot"
+
+TIMEOUT 45
+
+# Dial connection
+OK ATDT*99#
+
+# Don't send any more strings when it receives the string CONNECT. Module considers the data links as having been set up.
+CONNECT ''

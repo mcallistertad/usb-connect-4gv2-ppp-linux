@@ -1,0 +1,40 @@
+# GDSP Authentication if used
+user gdsp
+password gdsp
+
+# add defult route to routing table
+defaultroute replacedefaultroute
+
+# pppd will detach from its controlling terminal once it has successfully established the ppp connection
+updetach
+
+# exclude the password string from the log
+hide-password
+
+# specify modem location
+/dev/serial/by-id/usb-Vodafone_USBConnect4G_V2_1234567890ABCDE-if00-port0
+
+# connect/ disconnect chatscripts location
+connect "/usr/sbin/chat -v -f /etc/ppp/vodafone_chat"
+disconnect "/usr/sbin/chat -v -f /etc/ppp/disconnect_chat"
+
+# enable debug
+debug
+kdebug 4
+ipcp-no-addresses
+noipdefault
+
+# ask peer for namserver addresses
+usepeerdns
+
+# don't require peer auth
+noauth
+novj
+noccp
+persist
+maxfail 5
+holdoff 5
+
+# specify mtu size
+mru 1340
+mtu 1340
