@@ -1,0 +1,13 @@
+[Unit]
+Description=ppp-service
+After=usb-Vodafone_USBConnect4G_V2_1234567890ABCDE-if00-port0.device
+
+[Service]
+Type=forking
+ExecStart=pon vodafone
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

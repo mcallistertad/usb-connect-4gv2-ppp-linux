@@ -1,0 +1,9 @@
+[Unit]
+Description=ppp connection monitoring
+
+[Timer]
+OnBootSec=1m
+OnUnitActiveSec=30m
+
+[Install]
+WantedBy=timers.target
