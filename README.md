@@ -17,8 +17,8 @@ sudo bash install.sh
 ### Step 1. Install packages
 Update installed package list and install pppd
 ```
-sudo apt-get update
-sudo apt-get install ppp usb-modeswitch
+apt-get update
+apt-get install ppp usb-modeswitch
 ```
 ### Step 2. Determine USB modem serial ID
 In /etc/ppp/peers/vodafone 
@@ -38,7 +38,7 @@ mv ../peers/vodafone ~/etc/ppp/peers/vodafone/
 ```
 ### Step 4. Connect to the cellular network
 ```
-sudo pon vodafone
+pon vodafone
 ```
 ### Step 5. Check connection
 Check PPP interface is up
@@ -59,7 +59,7 @@ cat /etc/resolv.conf
 ```
 ### Step 6. Disconnect from the cellular network
 ```
-sudo poff vodafone
+poff vodafone
 ```
 ### Step 7. Create the daemons to keep the ppp connection up
 ```
