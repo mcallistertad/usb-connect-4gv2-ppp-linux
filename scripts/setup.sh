@@ -31,6 +31,10 @@ else
     exit 1
 fi
 
+# TODO: Append USB device ID/ path to
+# ppp-connect service (~/etc/ppp/peers/vodafone/)
+# vodafone ppp parameter file (~/etc/ppp/peers/vodafone/)
+
 # Move downloaded files
 echo "Moving files to correct directories"
 # Move chatscript to ppp directory
