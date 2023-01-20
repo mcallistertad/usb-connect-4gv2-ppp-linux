@@ -1,9 +1,18 @@
 # usb-connect-4gv2-ppp-linux
 
 ## Requirements
-- USB Connect 4Gv2 dongle
-- Linux machine (tested on a Raspberry Pi model 4 with Pi OS 64-bit installed and Ubuntu server 22.10 64-bit)
+- USB Connect 4Gv2 dongle + active SIM
+- Linux machine (tested on Ubuntu server 22.10 64-bit & Raspberry Pi model 4 with Pi OS 64-bit installed)
 
+# Option 1 - Use the install script
+Unzip the archive and run the install script as root 
+```
+wget https://github.com/mcallistertad/usb-connect-4gv2-ppp-linux/archive/refs/heads/main.zip
+unzip main.zip
+sudo bash install.sh
+```
+
+# Option 2 - Install and configure manually
 ## Step 1. Install packages
 Update installed package list and install pppd
 ```
@@ -43,7 +52,7 @@ hostname -I
 ```
 Check Vodafone namservers have been populated
 ```
-sudo nano /etc/resolv.conf
+cat /etc/resolv.conf
 ```
 ## Step 6. Disconnect from the cellular network
 ```
