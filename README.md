@@ -31,9 +31,7 @@ $ ls -l /dev/serial/by-id
 wget https://github.com/mcallistertad/usb-connect-4gv2-ppp-linux/archive/refs/heads/main.zip
 unzip main.zip
 cd usb-connect-4gv2-ppp-linux
-# Move chatscript to ppp directory
 mv ../chatscripts/vodafone_chat ~/etc/ppp/
-# Move dialup parameters to peers directory
 mv ../peers/vodafone ~/etc/ppp/peers/vodafone/
 ```
 ### Step 4. Connect to the cellular network
@@ -45,7 +43,7 @@ Check PPP interface is up
 ```
 ifconfig -a
 ```
-Ping Google namserver on PPP interface
+Ping namserver on PPP interface
 ```
 ping -I ppp0 8.8.8.8
 ```
@@ -53,7 +51,7 @@ Check IP address
 ```
 hostname -I
 ```
-Check Vodafone namservers have been populated
+Check Vodafone DNS entries have been populated
 ```
 cat /etc/resolv.conf
 ```

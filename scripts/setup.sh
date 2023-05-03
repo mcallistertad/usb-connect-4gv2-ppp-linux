@@ -88,7 +88,7 @@ fi
 
 echo "Check DNS"
 nameserver=$(grep -E -o "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)" /etc/resolv.conf | head -1)
-echo "DNS address: ${namserver}"
+echo "DNS address: ${nameserver}"
 ping_res=$(ping -c3 -I ppp0 ${nameserver})
 if [[ "$ping_res" =~ .*"ttl"*. ]];
 then
