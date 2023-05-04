@@ -23,7 +23,7 @@ fi
 
 echo "Checking USB modem is connected"
 usb_id=$(ls -l /dev/serial/by-id)
-if [[ "$usb_id" == *"$VF"* || *"$ALC"* ]];
+if [[ "$usb_id" == *"$VF"* || *"$AL"* ]];
 then
     echo "Found a modem\n"
 else
