@@ -2,7 +2,7 @@
 
 ## Requirements
 - USB Connect 4Gv2 dongle + active SIM
-- Linux machine (tested on Ubuntu server 22.10 64-bit & Raspberry Pi model 4 with Pi OS 64-bit installed)
+- Linux OS (tested on Raspberry Pi model 4 with Ubuntu server 22.10 64-bit & Pi OS 64-bit)
 
 ## Option 1 - Use the install script
 Unzip the archive and run the install script as root 
