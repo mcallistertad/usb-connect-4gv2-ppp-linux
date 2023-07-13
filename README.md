@@ -9,8 +9,8 @@ Unzip the archive and run the install script as root
 ```
 wget https://github.com/mcallistertad/usb-connect-4gv2-ppp-linux/archive/refs/heads/main.zip
 unzip main.zip
-cd usb-connect-4gv2-ppp-linux
-sudo bash install.sh
+cd usb-connect-4gv2-ppp-linux/scripts
+sudo bash setup.sh
 ```
 
 ## Option 2 - Install and configure manually
