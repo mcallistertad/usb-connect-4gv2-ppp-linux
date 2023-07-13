@@ -2,6 +2,7 @@
 
 VF='Vodafone'
 AL='Alcatel'
+QC='Qualcomm'
 
 now=$(date)
 echo "Starting modem setup\n $now"
@@ -23,6 +24,7 @@ fi
 
 echo "Checking USB modem is connected"
 usb_id=$(ls -l /dev/serial/by-id)
+#if [[ grep -q "$usb_id" <<< "$VF" ]];
 if [[ "$usb_id" == *"$VF"* || *"$AL"* ]];
 then
     echo "Found a modem\n"
